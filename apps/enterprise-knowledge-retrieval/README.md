@@ -1,36 +1,36 @@
-# Enterprise Knowledge Retrieval
+# Извлечение знаний предприятия
 
-This app is a deep dive on Enterprise Knowledge Retrieval, which aims to take some unstructured text documents and create a usable knowledge base application with it.
+Это приложение является подробным рассмотрением извлечения знаний предприятия, цель которого - преобразовать некоторые неструктурированные текстовые документы в удобную базу знаний.
 
-This repo contains a notebook and a basic Streamlit app:
-- `enterprise_knowledge_retrieval.ipynb`: A notebook containing a step by step process of tokenising, chunking and embedding your data in a vector database, building a chat agent on top and running a basic evaluation of its performance.
-- `chatbot.py`: A Streamlit app providing simple Q&A via a search bar to query your knowledge base.
+Этот репозиторий содержит блокнот и базовое приложение Streamlit:
+- `enterprise_knowledge_retrieval.ipynb`: Блокнот, содержащий пошаговый процесс токенизации, разбиения на части и встраивания ваших данных в векторную базу данных, создание чат-агента на его основе и выполнение базовой оценки его производительности.
+- `chatbot.py`: Приложение Streamlit, предоставляющее простой функционал вопросов и ответов через строку поиска для запросов в вашей базе знаний.
 
-To run the app, please follow the instructions below in the ```App``` section
+Для запуска приложения, пожалуйста, следуйте инструкциям ниже в разделе ```Приложение```
 
-## Notebook
+## Блокнот
 
-The notebook is the best place to start, and takes you through an end-to-end workflow for setting up and evaluating a simple back-end knowledge retrieval service:
-- **Setup:** Initiate variables and connect to a vector database.
-- **Storage:** Configure the database, prepare our data and store embeddings and metadata for retrieval.
-- **Search:** Extract relevant documents back out with a basic search function and use an LLM to summarise results into a concise reply.
-- **Answer:** Add a more sophisticated agent which will process the user's query and maintain a memory for follow-up questions.
-- **Evaluate:** Take question/answer pairs using our service, evaluate and plot them to scope out remedial action
+Блокнот - лучшее место для начала, он проведет вас через весь рабочий процесс по настройке и оценке простой службы извлечения знаний:
+- **Настройка:** Инициализация переменных и подключение к векторной базе данных.
+- **Хранение:** Конфигурация базы данных, подготовка данных и сохранение встраиваний и метаданных для извлечения.
+- **Поиск:** Извлечение соответствующих документов с помощью базовой функции поиска и использование LLM для суммирования результатов в краткий ответ.
+- **Ответ:** Добавление более сложного агента, который будет обрабатывать запрос пользователя и поддерживать память для последующих вопросов.
+- **Оценка:** Взятие пар вопрос/ответ с использованием нашего сервиса, оценка и построение графиков для определения необходимых действий.
 
-Once you've run the notebook through to the Search stage, you should have what you need to set up and run the app.
+После прохождения блокнота до этапа Поиск, у вас должно быть все необходимое для настройки и запуска приложения.
 
-## App
+## Приложение
 
-We've rolled in a basic Streamlit app that you can interact with to test your retrieval service using either standard semantic search or [HyDE](https://arxiv.org/abs/2212.10496) retrievals.
+Мы включили базовое приложение Streamlit, с которым вы можете взаимодействовать, чтобы проверить ваш сервис извлечения с использованием стандартного семантического поиска или извлечений [HyDE](https://arxiv.org/abs/2212.10496).
 
-To use it:
-- Ensure you followed the Setup and Storage steps from the notebook to populate a vector database with searchable content.
-- Set up a virtual environment with pip by running ```virtualenv venv``` (ensure ```virtualenv``` is installed).
-- Activate the environment by running ```source venv/bin/activate```.
-- Install requirements by running ```pip install -r requirements.txt```.
-- Run ```streamlit run chatbot.py``` to fire up the Streamlit app in your browser.
+Для его использования:
+- Убедитесь, что вы выполнили шаги Настройка и Хранение из блокнота для заполнения векторной базы данных поисковым контентом.
+- Настройте виртуальное окружение с помощью pip, выполнив команду ```virtualenv venv``` (убедитесь, что ```virtualenv``` установлен).
+- Активируйте окружение, выполнив команду ```source venv/bin/activate```.
+- Установите требования, выполнив команду ```pip install -r requirements.txt```.
+- Запустите ```streamlit run chatbot.py```, чтобы запустить приложение Streamlit в вашем браузере.
 
-## Limitations
+## Ограничения
 
-- This app uses Redis as a vector database, but there are many other options highlighted `../examples/vector_databases` depending on your need.
-- We introduce many areas you may optimize in the notebook, but we'll deep dive on these in subsequent cookbooks.
+- Это приложение использует Redis в качестве векторной базы данных, но в зависимости от ваших потребностей вы можете рассмотреть множество других вариантов, представленных в `../examples/vector_databases`.
+- Мы представляем множество областей, которые вы можете оптимизировать в блокноте, но мы подробно рассмотрим их в последующих кулинарных книгах.

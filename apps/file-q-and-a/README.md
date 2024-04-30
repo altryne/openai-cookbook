@@ -1,18 +1,18 @@
-# File Q&A
+# Вопросы и ответы по файлам
 
-File Q&A is a [Next.js](https://nextjs.org/) app that lets you find answers in your files using OpenAI APIs. You can upload files and ask questions related to their content, and the app will use embeddings and GPT to generate answers from the most relevant files.
+Вопросы и ответы по файлам - это приложение на [Next.js](https://nextjs.org/), которое позволяет находить ответы в ваших файлах с использованием API OpenAI. Вы можете загружать файлы и задавать вопросы, связанные с их содержимым, а приложение будет использовать встраивания и GPT для генерации ответов из наиболее релевантных файлов.
 
-This repo contains two versions of the app:
+Этот репозиторий содержит две версии приложения:
 
-- `/nextjs`: A standalone Next.js app that stores embeddings locally in the browser. You will need an OpenAI API key to use this app. Read more in its [README](./nextjs/README.md).
-- `/nextjs-with-flask-server`: A Next.js app that uses a Flask server as a proxy to access the OpenAI APIs, and Pinecone as a vector database to store embeddings. You will need an OpenAI API key and a Pinecone API key to use this app. Read more in its [README](./nextjs-with-flask-server/README.md).
+- `/nextjs`: Самостоятельное приложение Next.js, которое хранит встраивания локально в браузере. Для использования этого приложения вам понадобится ключ API OpenAI. Подробнее читайте в его [README](./nextjs/README.md).
+- `/nextjs-with-flask-server`: Приложение Next.js, которое использует сервер Flask в качестве прокси для доступа к API OpenAI и Pinecone в качестве векторной базы данных для хранения встраиваний. Для использования этого приложения вам понадобятся ключ API OpenAI и ключ API Pinecone. Подробнее читайте в его [README](./nextjs-with-flask-server/README.md).
 
-To run either version of the app, please follow the instructions in the respective README.md files in the subdirectories.
+Чтобы запустить любую версию приложения, пожалуйста, следуйте инструкциям в соответствующих файлах README.md в подкаталогах.
 
-## How it works
+## Как это работает
 
-When a file is uploaded, text is extracted from the file. This text is then split into shorter text chunks, and an embedding is created for each text chunk. When the user asks a question, an embedding is created for the question, and a similarity search is performed to find the file chunk embeddings that are most similar to the question (i.e. have highest cosine similarities with the question embedding). An API call is then made to the completions endpoint, with the question and the most relevant file chunks are included in the prompt. The generative model then gives the answer to the question found in the file chunks, if the answer can be found in the extracts.
+Когда файл загружается, из него извлекается текст. Затем этот текст разбивается на более короткие фрагменты текста, и для каждого фрагмента создается встраивание. Когда пользователь задает вопрос, создается встраивание для вопроса, и выполняется поиск по сходству, чтобы найти встраивания фрагментов файла, которые наиболее похожи на вопрос (то есть имеют наивысшее косинусное сходство с встраиванием вопроса). Затем выполняется вызов к конечной точке завершений, с вопросом и наиболее релевантными фрагментами файла, включенными в запрос. Генеративная модель затем дает ответ на вопрос, найденный в фрагментах файла, если ответ можно найти в извлечениях.
 
-## Limitations
+## Ограничения
 
-The app may sometimes generate answers that are not in the files, or hallucinate about the existence of files that are not uploaded.
+Приложение иногда может генерировать ответы, которые не содержатся в файлах, или создавать иллюзию существования файлов, которые не были загружены.

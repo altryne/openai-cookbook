@@ -1,35 +1,35 @@
-# Powering your products with ChatGPT and your own data
+# Интеграция ваших продуктов с ChatGPT и вашими собственными данными
 
-The Chatbot Kickstarter is a starter repo to get you used to building a basic Chatbot using the ChatGPT API and your own knowledge base. The flow you're taken through was originally presented with [these slides](https://drive.google.com/file/d/1dB-RQhZC_Q1iAsHkNNdkqtxxXqYODFYy/view?usp=share_link), which may come in useful to refer to. 
+Chatbot Kickstarter - это стартовый репозиторий, который поможет вам освоить создание базового чат-бота с использованием API ChatGPT и вашей собственной базы знаний. Процесс, через который вы будете проходить, изначально был представлен с [этими слайдами](https://drive.google.com/file/d/1dB-RQhZC_Q1iAsHkNNdkqtxxXqYODFYy/view?usp=share_link), которые могут быть полезны для справки.
 
-This repo contains one notebook and two basic Streamlit apps:
-- `powering_your_products_with_chatgpt_and_your_data.ipynb`: A notebook containing a step by step process of tokenising, chunking and embedding your data in a vector database, and building simple Q&A and Chatbot functionality on top.
-- `search.py`: A Streamlit app providing simple Q&A via a search bar to query your knowledge base.
-- `chat.py`: A Streamlit app providing a simple Chatbot via a search bar to query your knowledge base.
+Этот репозиторий содержит один блокнот и два базовых приложения Streamlit:
+- `powering_your_products_with_chatgpt_and_your_data.ipynb`: Блокнот, содержащий пошаговый процесс токенизации, разбиения на части и встраивания ваших данных в векторную базу данных, а также создание простой функциональности вопросов и ответов и чат-бота.
+- `search.py`: Приложение Streamlit, предоставляющее простой функционал вопросов и ответов через строку поиска для запросов в вашей базе знаний.
+- `chat.py`: Приложение Streamlit, предоставляющее простой чат-бот через строку поиска для запросов в вашей базе знаний.
 
-To run either version of the app, please follow the instructions in the respective README.md files in the subdirectories.
+Для запуска любой версии приложения, пожалуйста, следуйте инструкциям в соответствующих файлах README.md в подкаталогах.
 
-## How it works
+## Как это работает
 
-The notebook is the best place to start, and is broadly laid out as follows:
-- **Lay the foundations:**
-    - Set up the vector database to accept vectors and data
-    - Load the dataset, chunk the data up for embedding and store in the vector database
-- **Make it a product:**
-    - Add a retrieval step where users provide queries and we return the most relevant entries
-    - Summarise search results with GPT-3
-    - Test out this basic Q&A app in Streamlit
-- **Build your moat:**
-    - Create an Assistant class to manage context and interact with our bot
-    - Use the Chatbot to answer questions using semantic search context
-    - Test out this basic Chatbot app in Streamlit
+Лучше всего начать с блокнота, который в общих чертах устроен следующим образом:
+- **Заложить основу:**
+    - Настройте векторную базу данных для приема векторов и данных
+    - Загрузите набор данных, разбейте данные на части для встраивания и сохраните в векторной базе данных
+- **Сделайте это продуктом:**
+    - Добавьте шаг извлечения, где пользователи предоставляют запросы, и мы возвращаем наиболее релевантные записи
+    - Суммируйте результаты поиска с помощью GPT-3
+    - Протестируйте этот базовый функционал вопросов и ответов в Streamlit
+- **Постройте ваш бастион:**
+    - Создайте класс Assistant для управления контекстом и взаимодействия с нашим ботом
+    - Используйте чат-бота для ответа на вопросы с использованием контекста семантического поиска
+    - Протестируйте этот базовый чат-бот в Streamlit
 
-Once you've run the notebook and tried the two Streamlit apps, you should be in a position to strip out any useful snippets and start your own Q&A or Chat application.
+После того, как вы пройдете через блокнот и попробуете два приложения Streamlit, вы должны быть в состоянии выделить полезные фрагменты и начать создание собственного приложения для вопросов и ответов или чат-бота.
 
-## Limitations
+## Ограничения
 
-- This app uses Redis as a vector database, but there are many other options highlighted `../examples/vector_databases` depending on your need.
-- This is a simple starting point - if you hit issues deploying your use case you may need to tune (non-exhaustive list):
-    - The prompt and parameters for the model for it to answer accurately
-    - Your search to return more relevant results
-    - Your chunking/embedding approach to store the most relevant content effectively for retrieval
+- Это приложение использует Redis в качестве векторной базы данных, но в зависимости от ваших потребностей вы можете рассмотреть множество других вариантов, представленных в `../examples/vector_databases`.
+- Это простая отправная точка - если вы столкнетесь с проблемами при развертывании вашего варианта использования, вам, возможно, придется настроить (неисчерпывающий список):
+    - Подсказку и параметры для модели, чтобы она отвечала точно
+    - Ваш поиск для возврата более релевантных результатов
+    - Ваш подход к разбиению/встраиванию для эффективного хранения наиболее релевантного контента для извлечения

@@ -1,47 +1,47 @@
-# File Q&A with Next.js and Flask
+# Вопросы и ответы по файлам с использованием Next.js и Flask
 
-File Q&A is a web app that lets you find answers in your files. You can upload files and ask questions related to their content, and the app will use embeddings and GPT to generate answers from the most relevant files. \
+Вопросы и ответы по файлам - это веб-приложение, которое позволяет находить ответы в ваших файлах. Вы можете загружать файлы и задавать вопросы, связанные с их содержимым, а приложение будет использовать встраивания и GPT для генерации ответов из наиболее релевантных файлов.
 
-## Requirements
+## Требования
 
-To run the app, you need:
+Для работы приложения вам понадобится:
 
-- An OpenAI API key. You can create a new API key [here](https://beta.openai.com/account/api-keys).
-- A Pinecone API key and index name. You can create a new account and index [here](https://www.pinecone.io/).
-- Python 3.7 or higher and pipenv for the Flask server.
-- Node.js and npm for the Next.js client.
+- Ключ API OpenAI. Вы можете создать новый ключ API [здесь](https://beta.openai.com/account/api-keys).
+- Ключ API Pinecone и имя индекса. Вы можете создать новый аккаунт и индекс [здесь](https://www.pinecone.io/).
+- Python версии 3.7 или выше и pipenv для сервера Flask.
+- Node.js и npm для клиента Next.js.
 
-## Set-Up and Development
+## Настройка и разработка
 
-### Server
+### Сервер
 
-Fill out the config.yaml file with your Pinecone API key, index name and environment.
+Заполните файл config.yaml вашим ключом API Pinecone, именем индекса и окружением.
 
-Run the Flask server:
+Запустите сервер Flask:
 
 ```
 cd server
-bash script/start "<your OPENAI_API_KEY>"
+bash script/start "<ваш OPENAI_API_KEY>"
 ```
 
-### Client
+### Клиент
 
-Navigate to the client directory and install Node dependencies:
+Перейдите в директорию клиента и установите зависимости Node:
 
 ```
 cd client
 npm install
 ```
 
-Run the Next.js client:
+Запустите клиент Next.js:
 
 ```
 cd client
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the app.
+Откройте [http://localhost:3000](http://localhost:3000) в вашем браузере, чтобы увидеть приложение.
 
-## Limitations
+## Ограничения
 
-The app may sometimes generate answers that are not in the files, or hallucinate about the existence of files that are not uploaded.
+Приложение иногда может генерировать ответы, которые не содержатся в файлах, или создавать иллюзию существования файлов, которые не были загружены.

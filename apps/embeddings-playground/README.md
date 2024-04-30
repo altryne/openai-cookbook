@@ -1,42 +1,42 @@
-# Embeddings Playground
+# Игровая площадка для встраиваний
 
-[`embeddings_playground.py`](embeddings_playground.py) is a single-page streamlit app for experimenting with OpenAI embeddings.
+[`embeddings_playground.py`](embeddings_playground.py) - это одностраничное приложение streamlit для экспериментов с встраиваниями OpenAI.
 
-## Installation
+## Установка
 
-Before running, install required dependencies with:
+Перед запуском установите необходимые зависимости с помощью:
 
 `pip install -r apps/embeddings-playground/requirements.txt`
 
-(You may need to change the path to match your local path.)
+(Возможно, вам придется изменить путь, чтобы он соответствовал вашему локальному пути.)
 
-Verify installation of streamlit with `streamlit hello`.
+Проверьте установку streamlit с помощью `streamlit hello`.
 
-## Usage
+## Использование
 
-Run the script with:
+Запустите скрипт с помощью:
 
 `streamlit run apps/embeddings-playground/embeddings_playground.py`
 
-(Again, you may need to change the path to match your local path.)
+(Опять же, вам может потребоваться изменить путь, чтобы он соответствовал вашему локальному пути.)
 
-In the app, first select your choice of:
-- distance metric (we recommend cosine)
-- embedding model (we recommend `text-embedding-ada-002` for most use cases, as of May 2023)
+В приложении сначала выберите:
+- метрику расстояния (мы рекомендуем косинусное)
+- модель встраивания (мы рекомендуем `text-embedding-ada-002` для большинства случаев использования, по состоянию на май 2023 года)
 
-Then, enter a variable number of strings to compare. Click `rank` to see:
-- the ranked list of strings, sorted by distance from the first string
-- a heatmap showing the distance between each pair of strings
+Затем введите переменное количество строк для сравнения. Нажмите `ранжировать`, чтобы увидеть:
+- ранжированный список строк, отсортированный по расстоянию от первой строки
+- тепловую карту, показывающую расстояние между каждой парой строк
 
-## Example
+## Пример
 
-Here's an example distance matrix for 8 example strings related to `The sky is blue`:
+Вот пример матрицы расстояний для 8 примеров строк, связанных с `Небо голубое`:
 
-![example distance matrix](example_distance_matrix.png)
+![пример матрицы расстояний](example_distance_matrix.png)
 
-From these distance pairs, you can see:
-- embeddings measure topical similarity more than logical similarity (e.g., `The sky is blue` is very close to `The sky is not blue`)
-- punctuation affects embeddings (e.g., `"THE. SKY. IS. BLUE!"` is only third closest to `The sky is blue`)
-- within-language pairs are stronger than across-language pairs (e.g., `El cielo as azul` is closer to `El cielo es rojo` than to `The sky is blue`)
+Из этих пар расстояний вы можете увидеть:
+- встраивания измеряют тематическое сходство больше, чем логическое сходство (например, `Небо голубое` очень близко к `Небо не голубое`)
+- пунктуация влияет на встраивания (например, `"НЕБО. ГОЛУБОЕ!"` только третье по близости к `Небо голубое`)
+- пары внутри одного языка сильнее, чем пары между языками (например, `El cielo es azul` ближе к `El cielo es rojo`, чем к `Небо голубое`)
 
-Experiment with your own strings to see what you can learn.
+Экспериментируйте со своими собственными строками, чтобы узнать, что вы можете выяснить.
