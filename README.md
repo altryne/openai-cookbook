@@ -1,127 +1,127 @@
 # OpenAI Cookbook
 
-OpenAI Cookbook представляет примеры кода для выполнения общих задач с использованием [OpenAI API].
+The OpenAI Cookbook shares example code for accomplishing common tasks with the [OpenAI API].
 
-Для запуска этих примеров вам понадобится аккаунт OpenAI и API ключ ([создайте бесплатный аккаунт][api signup]).
+To run these examples, you'll need an OpenAI account and API key ([create a free account][api signup]).
 
-Большинство примеров кода написаны на Python, хотя концепции могут быть применены на любом языке.
+Most code examples are written in Python, though the concepts can be applied in any language.
 
-[![Открыть в GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=468576060&machine=basicLinux32gb&location=EastUs)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=468576060&machine=basicLinux32gb&location=EastUs)
 
-## Недавно добавлено/обновлено 🆕 ✨
+## Recently added/updated 🆕 ✨
 
-- [Ответы на вопросы с использованием поискового API и переранжирования](https://github.com/openai/openai-cookbook/blob/main/examples/Question_answering_using_a_search_API.ipynb) [16 июня 2023 года]
-- [Как вызывать функции с моделями Chat](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_call_functions_with_chat_models.ipynb) [13 июня 2023 года]
-- [Связанные ресурсы из интернета](https://github.com/openai/openai-cookbook#related-resources-from-around-the-web) [22 мая 2023 года]
-- [Площадка для встраивания (приложение streamlit)](apps/embeddings-playground/README.md) [19 мая 2023 года]
-- [Как использовать многошаговый запрос для написания модульных тестов](examples/Unit_test_writing_using_a_multi-step_prompt.ipynb) [19 мая 2023 года]
-- [Как создавать динамические маски с DALL·E и Segment Anything](examples/dalle/How_to_create_dynamic_masks_with_DALL-E_and_Segment_Anything.ipynb) [19 мая 2023 года]
+- [Question answering using a search API and re-ranking](https://github.com/openai/openai-cookbook/blob/main/examples/Question_answering_using_a_search_API.ipynb) [June 16th, 2023]
+- [How to call functions with Chat models](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_call_functions_with_chat_models.ipynb) [June 13th, 2023]
+- [Related resources from around the web](https://github.com/openai/openai-cookbook#related-resources-from-around-the-web) [May 22, 2023]
+- [Embeddings playground (streamlit app)](apps/embeddings-playground/README.md) [May 19, 2023]
+- [How to use a multi-step prompt to write unit tests](examples/Unit_test_writing_using_a_multi-step_prompt.ipynb) [May 19, 2023]
+- [How to create dynamic masks with DALL·E and Segment Anything](examples/dalle/How_to_create_dynamic_masks_with_DALL-E_and_Segment_Anything.ipynb) [May 19, 2023]
 
-## Руководства и примеры
+## Guides & examples
 
-- Использование API
-  - [Как обрабатывать ограничения скорости](examples/How_to_handle_rate_limits.ipynb)
-    - [Пример скрипта параллельной обработки, который избегает достижения ограничений скорости](examples/api_request_parallel_processor.py)
-  - [Как подсчитать токены с tiktoken](examples/How_to_count_tokens_with_tiktoken.ipynb)
+- API usage
+  - [How to handle rate limits](examples/How_to_handle_rate_limits.ipynb)
+    - [Example parallel processing script that avoids hitting rate limits](examples/api_request_parallel_processor.py)
+  - [How to count tokens with tiktoken](examples/How_to_count_tokens_with_tiktoken.ipynb)
 - GPT
-  - [Как форматировать входные данные для моделей ChatGPT](examples/How_to_format_inputs_to_ChatGPT_models.ipynb)
-  - [Как потоково передавать завершения](examples/How_to_stream_completions.ipynb)
-  - [Как использовать многошаговый запрос для написания модульных тестов](examples/Unit_test_writing_using_a_multi-step_prompt.ipynb)
-  - [Руководство: Как работать с большими языковыми моделями](how_to_work_with_large_language_models.md)
-  - [Руководство: Техники для улучшения надежности](techniques_to_improve_reliability.md)
-- Встраивания
-  - [Примеры сравнения текстов](text_comparison_examples.md)
-  - [Как получить встраивания](examples/Get_embeddings.ipynb)
-  - [Ответы на вопросы с использованием встраиваний](examples/Question_answering_using_embeddings.ipynb)
-  - [Использование баз данных векторов для поиска встраиваний](examples/vector_databases/Using_vector_databases_for_embeddings_search.ipynb)
-  - [Семантический поиск с использованием встраиваний](examples/Semantic_text_search_using_embeddings.ipynb)
-  - [Рекомендации с использованием встраиваний](examples/Recommendation_using_embeddings.ipynb)
-  - [Кластеризация встраиваний](examples/Clustering.ipynb)
-  - [Визуализация встраиваний в 2D](examples/Visualizing_embeddings_in_2D.ipynb) или [3D](examples/Visualizing_embeddings_in_3D.ipynb)
-  - [Встраивание длинных текстов](examples/Embedding_long_inputs.ipynb)
-  - [Площадка для встраивания (приложение streamlit)](apps/embeddings-playground/README.md)
-- Приложения
-  - [Вопросы и ответы по файлам](apps/file-q-and-a/)
-  - [Вопросы и ответы по веб-поиску](apps/web-crawl-q-and-a)
-  - [Улучшение ваших продуктов с помощью ChatGPT и собственных данных](apps/chatbot-kickstarter/powering_your_products_with_chatgpt_and_your_data.ipynb)
-- Дообучение GPT-3
-  - [Руководство: лучшие практики дообучения GPT-3 для классификации текста](https://docs.google.com/document/d/1rqj7dkuvl7Byd5KQPUJRxc19BJt8wo0yHNwK84KfU3Q/edit)
-  - [Дообученная классификация](examples/Fine-tuned_classification.ipynb)
+  - [How to format inputs to ChatGPT models](examples/How_to_format_inputs_to_ChatGPT_models.ipynb)
+  - [How to stream completions](examples/How_to_stream_completions.ipynb)
+  - [How to use a multi-step prompt to write unit tests](examples/Unit_test_writing_using_a_multi-step_prompt.ipynb)
+  - [Guide: How to work with large language models](how_to_work_with_large_language_models.md)
+  - [Guide: Techniques to improve reliability](techniques_to_improve_reliability.md)
+- Embeddings
+  - [Text comparison examples](text_comparison_examples.md)
+  - [How to get embeddings](examples/Get_embeddings.ipynb)
+  - [Question answering using embeddings](examples/Question_answering_using_embeddings.ipynb)
+  - [Using vector databases for embeddings search](examples/vector_databases/Using_vector_databases_for_embeddings_search.ipynb)
+  - [Semantic search using embeddings](examples/Semantic_text_search_using_embeddings.ipynb)
+  - [Recommendations using embeddings](examples/Recommendation_using_embeddings.ipynb)
+  - [Clustering embeddings](examples/Clustering.ipynb)
+  - [Visualizing embeddings in 2D](examples/Visualizing_embeddings_in_2D.ipynb) or [3D](examples/Visualizing_embeddings_in_3D.ipynb)
+  - [Embedding long texts](examples/Embedding_long_inputs.ipynb)
+  - [Embeddings playground (streamlit app)](apps/embeddings-playground/README.md)
+- Apps
+  - [File Q&A](apps/file-q-and-a/)
+  - [Web Crawl Q&A](apps/web-crawl-q-and-a)
+  - [Powering your products with ChatGPT and your own data](apps/chatbot-kickstarter/powering_your_products_with_chatgpt_and_your_data.ipynb)
+- Fine-tuning GPT-3
+  - [Guide: best practices for fine-tuning GPT-3 to classify text](https://docs.google.com/document/d/1rqj7dkuvl7Byd5KQPUJRxc19BJt8wo0yHNwK84KfU3Q/edit)
+  - [Fine-tuned classification](examples/Fine-tuned_classification.ipynb)
 - DALL-E
-  - [Как генерировать и редактировать изображения с DALL·E](examples/dalle/Image_generations_edits_and_variations_with_DALL-E.ipynb)
-  - [Как создавать динамические маски с DALL·E и Segment Anything](examples/dalle/How_to_create_dynamic_masks_with_DALL-E_and_Segment_Anything.ipynb)
-- Azure OpenAI (альтернативный API от Microsoft Azure)
-  - [Как использовать ChatGPT с Azure OpenAI](examples/azure/chat.ipynb)
-  - [Как получить завершения от Azure OpenAI](examples/azure/completions.ipynb)
-  - [Как получить встраивания от Azure OpenAI](examples/azure/embeddings.ipynb)
-  - [Как генерировать изображения с DALL·E от Azure OpenAI](examples/azure/DALL-E.ipynb)
+  - [How to generate and edit images with DALL·E](examples/dalle/Image_generations_edits_and_variations_with_DALL-E.ipynb)
+  - [How to create dynamic masks with DALL·E and Segment Anything](examples/dalle/How_to_create_dynamic_masks_with_DALL-E_and_Segment_Anything.ipynb)
+- Azure OpenAI (alternative API from Microsoft Azure)
+  - [How to use ChatGPT with Azure OpenAI](examples/azure/chat.ipynb)
+  - [How to get completions from Azure OpenAI](examples/azure/completions.ipynb)
+  - [How to get embeddings from Azure OpenAI](examples/azure/embeddings.ipynb)
+  - [How to generate images with DALL·E fom Azure OpenAI](examples/azure/DALL-E.ipynb)
 
-## Связанные ресурсы OpenAI
+## Related OpenAI resources
 
-Помимо примеров кода здесь, вы можете узнать о [OpenAI API] из следующих ресурсов:
+Beyond the code examples here, you can learn about the [OpenAI API] from the following resources:
 
-- Экспериментируйте с [ChatGPT]
-- Попробуйте API в [OpenAI Playground]
-- Прочитайте об API в [OpenAI Documentation]
-- Получите помощь в [OpenAI Help Center]
-- Обсудите API в [OpenAI Community Forum] или [OpenAI Discord channel]
-- Посмотрите примеры запросов в [OpenAI Examples]
-- Оставайтесь в курсе событий с [OpenAI Blog]
+- Experiment with [ChatGPT]
+- Try the API in the [OpenAI Playground]
+- Read about the API in the [OpenAI Documentation]
+- Get help in the [OpenAI Help Center]
+- Discuss the API in the [OpenAI Community Forum] or [OpenAI Discord channel]
+- See example prompts in the [OpenAI Examples]
+- Stay updated with the [OpenAI Blog]
 
-## Связанные ресурсы из интернета
+## Related resources from around the web
 
-Люди создают отличные инструменты и статьи для улучшения результатов работы с GPT. Вот некоторые крутые, которые мы видели:
+People are writing great tools and papers for improving outputs from GPT. Here are some cool ones we've seen:
 
-### Библиотеки и инструменты для запросов
+### Prompting libraries & tools
 
-- [Guidance](https://github.com/microsoft/guidance): Удобная библиотека Python от Microsoft, использующая шаблоны Handlebars для чередования генерации, запросов и логического контроля.
-- [LangChain](https://github.com/hwchase17/langchain): Популярная библиотека Python/JavaScript для создания последовательностей запросов к языковым моделям.
-- [FLAML (A Fast Library for Automated Machine Learning & Tuning)](https://microsoft.github.io/FLAML/docs/Getting-Started/): Библиотека Python для автоматизации выбора моделей, гиперпараметров и других настраиваемых параметров.
-- [Chainlit](https://docs.chainlit.io/overview): Библиотека Python для создания интерфейсов чат-ботов.
-- [Guardrails.ai](https://shreyar.github.io/guardrails/): Библиотека Python для проверки результатов и повторных попыток при сбоях. Находится в альфа-версии, поэтому ожидайте острых углов и ошибок.
-- [Semantic Kernel](https://devblogs.microsoft.com/semantic-kernel/): Библиотека Python/C# от Microsoft, поддерживающая шаблоны запросов, цепочки функций, векторизированную память и интеллектуальное планирование.
-- [Outlines](https://github.com/normal-computing/outlines): Библиотека Python, предоставляющая специализированный язык для упрощения запросов и ограничения генерации.
-- [Promptify](https://github.com/promptslab/Promptify): Небольшая библиотека Python для использования языковых моделей для выполнения задач NLP.
-- [Scale Spellbook](https://scale.com/spellbook): Платный продукт для создания, сравнения и запуска приложений языковых моделей.
-- [PromptPerfect](https://promptperfect.jina.ai/prompts): Платный продукт для тестирования и улучшения запросов.
-- [Weights & Biases](https://wandb.ai/site/solutions/llmops): Платный продукт для отслеживания обучения моделей и экспериментов с запросами.
-- [OpenAI Evals](https://github.com/openai/evals): Открытая библиотека для оценки производительности задач языковых моделей и запросов.
-- [LlamaIndex](https://github.com/jerryjliu/llama_index): Библиотека Python для расширения приложений LLM с помощью данных.
-- [Arthur Shield](https://www.arthur.ai/get-started): Платный продукт для обнаружения токсичности, галлюцинаций, внедрения запросов и т. д.
-- [LMQL](https://lmql.ai): Язык программирования для взаимодействия с LLM с поддержкой типизированных запросов, управления потоком, ограничений и инструментов.
+- [Guidance](https://github.com/microsoft/guidance): A handy looking Python library from Microsoft that uses Handlebars templating to interleave generation, prompting, and logical control.
+- [LangChain](https://github.com/hwchase17/langchain): A popular Python/JavaScript library for chaining sequences of language model prompts.
+- [FLAML (A Fast Library for Automated Machine Learning & Tuning)](https://microsoft.github.io/FLAML/docs/Getting-Started/): A Python library for automating selection of models, hyperparameters, and other tunable choices.
+- [Chainlit](https://docs.chainlit.io/overview): A Python library for making chatbot interfaces.
+- [Guardrails.ai](https://shreyar.github.io/guardrails/): A Python library for validating outputs and retrying failures. Still in alpha, so expect sharp edges and bugs.
+- [Semantic Kernel](https://devblogs.microsoft.com/semantic-kernel/): A Python/C# library from Microsoft that supports prompt templating, function chaining, vectorized memory, and intelligent planning.
+- [Outlines](https://github.com/normal-computing/outlines): A Python library that provides a domain-specific language to simplify prompting and constrain generation.
+- [Promptify](https://github.com/promptslab/Promptify): A small Python library for using language models to perform NLP tasks.
+- [Scale Spellbook](https://scale.com/spellbook): A paid product for building, comparing, and shipping language model apps.
+- [PromptPerfect](https://promptperfect.jina.ai/prompts): A paid product for testing and improving prompts.
+- [Weights & Biases](https://wandb.ai/site/solutions/llmops): A paid product for tracking model training and prompt engineering experiments.
+- [OpenAI Evals](https://github.com/openai/evals): An open-source library for evaluating task performance of language models and prompts.
+- [LlamaIndex](https://github.com/jerryjliu/llama_index): A Python library for augmenting LLM apps with data.
+- [Arthur Shield](https://www.arthur.ai/get-started): A paid product for detecting toxicity, hallucination, prompt injection, etc.
+- [LMQL](https://lmql.ai): A programming language for LLM interaction with support for typed prompting, control flow, constraints, and tools.
 
-### Руководства по запросам
+### Prompting guides
 
-- [Руководство по запросам от Brex](https://github.com/brexhq/prompt-engineering): Введение Brex в языковые модели и инженерию запросов.
-- [promptingguide.ai](https://www.promptingguide.ai/): Руководство по инженерии запросов, демонстрирующее множество техник.
-- [OpenAI Cookbook: Техники для улучшения надежности](https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md): Немного устаревший (сентябрь 2022 года) обзор техник для запросов к языковым моделям.
-- [Lil'Log Prompt Engineering](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/): Обзор литературы по инженерии запросов от исследователя OpenAI (по состоянию на март 2023 года).
-- [learnprompting.org](https://learnprompting.org/): Вводный курс по инженерии запросов.
+- [Brex's Prompt Engineering Guide](https://github.com/brexhq/prompt-engineering): Brex's introduction to language models and prompt engineering.
+- [promptingguide.ai](https://www.promptingguide.ai/): A prompt engineering guide that demonstrates many techniques.
+- [OpenAI Cookbook: Techniques to improve reliability](https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md): A slightly dated (Sep 2022) review of techniques for prompting language models.
+- [Lil'Log Prompt Engineering](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/): An OpenAI researcher's review of the prompt engineering literature (as of March 2023).
+- [learnprompting.org](https://learnprompting.org/): An introductory course to prompt engineering.
 
-### Видеокурсы
+### Video courses
 
-- [DeepLearning.AI Эндрю Нг](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/): Краткий курс по инженерии запросов для разработчиков.
-- [Давайте построим GPT от Андрея Карпати](https://www.youtube.com/watch?v=kCc8FmEb1nY): Подробное погружение в машинное обучение, лежащее в основе GPT.
-- [Инженерия запросов от DAIR.AI](https://www.youtube.com/watch?v=dOxUroR57xs): Одночасовое видео о различных техниках инженерии запросов.
+- [Andrew Ng's DeepLearning.AI](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/): A short course on prompt engineering for developers.
+- [Andrej Karpathy's Let's build GPT](https://www.youtube.com/watch?v=kCc8FmEb1nY): A detailed dive into the machine learning underlying GPT.
+- [Prompt Engineering by DAIR.AI](https://www.youtube.com/watch?v=dOxUroR57xs): A one-hour video on various prompt engineering techniques.
 
-### Статьи о продвинутых запросах для улучшения рассуждений
+### Papers on advanced prompting to improve reasoning
 
-- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models (2022)](https://arxiv.org/abs/2201.11903): Использование запросов с несколькими примерами для пошагового рассуждения улучшает их. Оценка PaLM на задачах математических словесных задач (GSM8K) повышается с 18% до 57%.
-- [Self-Consistency Improves Chain of Thought Reasoning in Language Models (2022)](https://arxiv.org/abs/2203.11171): Голосование среди нескольких результатов улучшает точность еще больше. Голосование среди 40 результатов повышает оценку PaLM на математических словесных задачах до 74%, а `code-davinci-002` - с 60% до 78%.
-- [Tree of Thoughts: Deliberate Problem Solving with Large Language Models (2023)](https://arxiv.org/abs/2305.10601): Поиск по деревьям пошагового рассуждения помогает еще больше, чем голосование по цепочкам рассуждений. Это повышает оценки `GPT-4` на творческом письме и кроссвордах.
-- [Language Models are Zero-Shot Reasoners (2022)](https://arxiv.org/abs/2205.11916): Сообщение моделям, следующим инструкциям, чтобы думать пошагово, улучшает их рассуждения. Это повышает оценку `text-davinci-002` на математических словесных задачах (GSM8K) с 13% до 41%.
-- [Large Language Models Are Human-Level Prompt Engineers (2023)](https://arxiv.org/abs/2211.01910): Автоматизированный поиск по возможным запросам нашел запрос, который повышает оценки на математических словесных задачах (GSM8K) до 43%, на 2 процентных пункта выше, чем у запроса, написанного человеком, в Language Models are Zero-Shot Reasoners.
-- [Reprompting: Automated Chain-of-Thought Prompt Inference Through Gibbs Sampling (2023)](https://arxiv.org/abs/2305.09993): Автоматизированный поиск по возможным запросам цепочек рассуждений улучшил оценки ChatGPT на нескольких эталонах на 0–20 процентных пунктов.
-- [Faithful Reasoning Using Large Language Models (2022)](https://arxiv.org/abs/2208.14271): Рассуждение может быть улучшено системой, которая объединяет: цепочки рассуждений, сгенерированные альтернативными запросами выбора и вывода, модель остановки, которая выбирает, когда останавливать циклы выбора-вывода, функцию значения для поиска по нескольким путям рассуждения и метки предложений, которые помогают избегать галлюцинаций.
-- [STaR: Bootstrapping Reasoning With Reasoning (2022)](https://arxiv.org/abs/2203.14465): Рассуждение в цепочке мыслей может быть встроено в модели через дообучение. Для задач с ключом ответа примеры цепочек мыслей могут быть сгенерированы языковыми моделями.
-- [ReAct: Synergizing Reasoning and Acting in Language Models (2023)](https://arxiv.org/abs/2210.03629): Для задач с инструментами или средой цепочка мыслей работает лучше, если вы предписываете чередовать **Re**asoning шаги (думая о том, что делать) и **Act**ing (получая информацию от инструмента или среды).
-- [Reflexion: an autonomous agent with dynamic memory and self-reflection (2023)](https://arxiv.org/abs/2303.11366): Повторные попытки задач с памятью о предыдущих неудачах улучшают последующую производительность.
-- [Demonstrate-Search-Predict: Composing retrieval and language models for knowledge-intensive NLP (2023)](https://arxiv.org/abs/2212.14024): Модели, дополненные знаниями через "поиск-затем-чтение", могут быть улучшены с помощью многошаговых цепочек поиска.
-- [Improving Factuality and Reasoning in Language Models through Multiagent Debate (2023)](https://arxiv.org/abs/2305.14325): Генерация дебатов между несколькими агентами ChatGPT в течение нескольких раундов улучшает оценки по различным эталонам. Оценки по математическим словесным задачам повышаются с 77% до 85%.
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models (2022)](https://arxiv.org/abs/2201.11903): Using few-shot prompts to ask models to think step by step improves their reasoning. PaLM's score on math word problems (GSM8K) rises from 18% to 57%.
+- [Self-Consistency Improves Chain of Thought Reasoning in Language Models (2022)](https://arxiv.org/abs/2203.11171): Taking votes from multiple outputs improves accuracy even more. Voting across 40 outputs raises PaLM's score on math word problems further, from 57% to 74%, and `code-davinci-002`'s from 60% to 78%.
+- [Tree of Thoughts: Deliberate Problem Solving with Large Language Models (2023)](https://arxiv.org/abs/2305.10601): Searching over trees of step by step reasoning helps even more than voting over chains of thought. It lifts `GPT-4`'s scores on creative writing and crosswords.
+- [Language Models are Zero-Shot Reasoners (2022)](https://arxiv.org/abs/2205.11916): Telling instruction-following models to think step by step improves their reasoning. It lifts `text-davinci-002`'s score on math word problems (GSM8K) from 13% to 41%.
+- [Large Language Models Are Human-Level Prompt Engineers (2023)](https://arxiv.org/abs/2211.01910): Automated searching over possible prompts found a prompt that lifts scores on math word problems (GSM8K) to 43%, 2 percentage points above the human-written prompt in Language Models are Zero-Shot Reasoners.
+- [Reprompting: Automated Chain-of-Thought Prompt Inference Through Gibbs Sampling (2023)](https://arxiv.org/abs/2305.09993): Automated searching over possible chain-of-thought prompts improved ChatGPT's scores on a few benchmarks by 0–20 percentage points.
+- [Faithful Reasoning Using Large Language Models (2022)](https://arxiv.org/abs/2208.14271): Reasoning can be improved by a system that combines: chains of thought generated by alternative selection and inference prompts, a halter model that chooses when to halt selection-inference loops, a value function to search over multiple reasoning paths, and sentence labels that help avoid hallucination.
+- [STaR: Bootstrapping Reasoning With Reasoning (2022)](https://arxiv.org/abs/2203.14465): Chain of thought reasoning can be baked into models via fine-tuning. For tasks with an answer key, example chains of thoughts can be generated by language models.
+- [ReAct: Synergizing Reasoning and Acting in Language Models (2023)](https://arxiv.org/abs/2210.03629): For tasks with tools or an environment, chain of thought works better you prescriptively alternate between **Re**asoning steps (thinking about what to do) and **Act**ing (getting information from a tool or environment).
+- [Reflexion: an autonomous agent with dynamic memory and self-reflection (2023)](https://arxiv.org/abs/2303.11366): Retrying tasks with memory of prior failures improves subsequent performance.
+- [Demonstrate-Search-Predict: Composing retrieval and language models for knowledge-intensive NLP (2023)](https://arxiv.org/abs/2212.14024): Models augmented with knowledge via a "retrieve-then-read" can be improved with multi-hop chains of searches.
+- [Improving Factuality and Reasoning in Language Models through Multiagent Debate (2023)](https://arxiv.org/abs/2305.14325): Generating debates between a few ChatGPT agents over a few rounds improves scores on various benchmarks. Math word problem scores rise from 77% to 85%.
 
-## Вклад
+## Contributing
 
-Если есть примеры или руководства, которые вы хотели бы видеть, не стесняйтесь предлагать их на [странице проблем]. Мы также рады принять качественные запросы на внесение изменений, если они соответствуют содержанию репозитория.
+If there are examples or guides you'd like to see, feel free to suggest them on the [issues page]. We are also happy to accept high quality pull requests, as long as they fit the scope of the repo.
 
 [chatgpt]: https://chat.openai.com/
 [openai api]: https://openai.com/api/
